@@ -1,2 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:ital@0;1&display=swap');
+
+:root {
+    --fontFamilyMain: 'Playfair Display', sans-serif;
+    --fontFamilySecondary: 'Raleway', sans-serif;
+    --colorHoverPosts: #986c43;
+}
+
+body {
+    font-family: var(--fontFamilySecondary) !important;
+}
+
+.negrita {
+    font-weight: 700;
+}
+
+section > h1, .card-title {
+    font-family: var(--fontFamilyMain) !important;
+    color: #364037;
+}
+
+.card-text {
+    color: #364037;
+}
+
+.card-body:hover > :is(.card-title, .card-text) {
+    color: var(--colorHoverPosts);
+}
