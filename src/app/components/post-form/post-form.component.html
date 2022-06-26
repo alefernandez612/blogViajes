@@ -1,29 +1,33 @@
-<form>
+<form class="container" [formGroup]="postForm" (ngSubmit)="guardar()" novalidate>
     <div class="mb-3">
         <label for="titulo" class="form-label">Título de la publicación</label>
-        <input type="text" class="form-control" id="titulo">
+        <input type="text" class="form-control" id="titulo" formControlName="titulo">
+    </div>
+    <div class="mb-3">
+        <label for="autor" class="form-label">Autor de la publicación</label>
+        <input type="text" class="form-control" id="autor" formControlName="autor">
     </div>
     <div class="mb-3">
         <label for="descripcion" class="form-label">Descripción</label>
-        <input type="text" class="form-control" id="descripcion">
+        <textarea class="form-control" type="text" id="descripcion" cols="140" rows="10" formControlName="descripcion"></textarea>
     </div>
     <div class="mb-3">
         <label for="imagen" class="form-label">Imagen de la publicación</label>
-        <input type="image" class="form-control" id="imagen">
+        <input type="text" class="form-control" id="imagen" formControlName="imagen">
     </div>
     <div class="mb-3">
         <label for="fecha" class="form-label">Fecha de la publicación</label>
-        <input type="date" class="form-control" id="fecha">
+        <input type="date" class="form-control" id="fecha" formControlName="fecha" placeholder="Inserta url de la imagen...">
     </div>
     <div class="mb-3">
-        <select class="form-select" id="categoria">
+        <select class="form-select" id="categoria" formControlName="categoria">
             <option value="">Selecciona una categoría...</option>
-            <option value="">Playa</option>
-            <option value="">Montaña</option>
-            <option value="">Ciudad</option>
-            <option value="">Rural</option>
-            <option value="">Festivales</option>
+            <option value="playa">Playa</option>
+            <option value="montaña">Montaña</option>
+            <option value="ciudad">Ciudad</option>
+            <option value="rural">Rural</option>
+            <option value="festival">Festivales</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" [disabled]="postForm.invalid" class="btn">Guardar</button>
 </form>

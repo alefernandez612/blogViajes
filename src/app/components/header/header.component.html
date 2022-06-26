@@ -1,4 +1,4 @@
-<nav class="navbar fixed-top navbar-expand-lg navbar-light">
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
             <img src="./assets/images/logo.png" alt="Logo" width="40" class="img-fluid d-block">
@@ -9,10 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Inicio</a>
+                    <a class="nav-link" routerLinkActive="active" aria-current="page" [routerLink]="['/inicio']">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#">Nuevos post</a>
+                    <a class="nav-link" routerLinkActive="active" aria-current="page" [routerLink]="['/nuevo-post']">Nuevos post</a>
                 </li>
             </ul>
             <div class="navbar-nav nav-item dropdown text-lg-end">
@@ -20,11 +20,11 @@
                     Categorías
                 </a>
                 <ul class="dropdown-menu border-0" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item text-white rounded-1" href="#">Playa</a></li>
-                    <li><a class="dropdown-item text-white rounded-1" href="#">Montaña</a></li>
-                    <li><a class="dropdown-item text-white rounded-1" href="#">Ciudad</a></li>
-                    <li><a class="dropdown-item text-white rounded-1" href="#">Rural</a></li>
-                    <li><a class="dropdown-item text-white rounded-1" href="#">Festivales</a></li>
+                    <li><a class="dropdown-item rounded-1" href="#">Playa</a></li>
+                    <li><a class="dropdown-item rounded-1" href="#">Montaña</a></li>
+                    <li><a class="dropdown-item rounded-1" href="#">Ciudad</a></li>
+                    <li><a class="dropdown-item rounded-1" href="#">Rural</a></li>
+                    <li><a class="dropdown-item rounded-1" href="#">Festivales</a></li>
                 </ul>
             </div>
         </div>

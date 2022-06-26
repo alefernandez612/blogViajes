@@ -11,20 +11,3 @@
 body {
     font-family: var(--fontFamilySecondary) !important;
 }
-
-.negrita {
-    font-weight: 700;
-}
-
-section > h1, .card-title {
-    font-family: var(--fontFamilyMain) !important;
-    color: #364037;
-}
-
-.card-text {
-    color: #364037;
-}
-
-.card-body:hover > :is(.card-title, .card-text) {
-    color: var(--colorHoverPosts);
-}

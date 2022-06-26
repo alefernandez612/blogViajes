@@ -1,31 +1,12 @@
-nav {
+nav, .dropdown-menu, .dropdown-item:focus, .dropdown-item:hover {
     background-color: #364037;
 }
 
-nav .nav-link {
+nav :is(.nav-link, .dropdown-item) {
     transition: .5s;
     color: #fff;
 }
 
-nav .nav-link:hover {
+nav :is(.nav-link:hover, .nav-link:focus, .active, .dropdown-item:focus, .dropdown-item:hover) {
     color: #f4dec9;
-}
-
-.dropdown-item:focus, .dropdown-item:hover {
-    background-color: #364037;
-    color: #f4dec9 !important;
-}
-
-.dropdown-menu {
-    background-color: transparent;
-}
-
-@media (min-width: 992px) {
-    .dropdown-menu {
-        background-color: #364037;
-    }
-
-    .dropdown-item {
-        color: #fff !important;
-    }
 }

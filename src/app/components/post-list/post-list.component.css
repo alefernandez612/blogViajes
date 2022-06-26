@@ -1,7 +1,16 @@
-.container {
-    margin-top: 100px;
-}
-
 #myCarousel .carousel-item {
     height: 32rem;
+}
+
+section > h1, .card-title {
+    font-family: var(--fontFamilyMain) !important;
+    font-weight: 700;
+}
+
+section > h1, .card-title, .card-text {
+    color: #364037;
+}
+
+.card-body:hover > :is(.card-title, .card-text) {
+    color: var(--colorHoverPosts);
 }
